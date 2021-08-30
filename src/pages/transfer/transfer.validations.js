@@ -39,38 +39,38 @@ const validationSchema = {
             ],
         day:
             [
-                // {
-                //     validator: Validators.required,
-                //     message: 'Campo requerido',  
-                // },
+                {
+                    validator: Validators.required,
+                    message: 'Campo requerido',  
+                },
                 {
                     validator: Validators.pattern,
                     customArgs: { pattern: /^([1-9]|[1-2]\d|3[01])$/ },
-                    // message: 'Error',
+                    message: 'Introduzca un día válido',
                 },            
             ],
         month:
             [
-                // {
-                //     validator: Validators.required,
-                //     message: 'Campo requerido',  
-                // }, 
+                {
+                    validator: Validators.required,
+                    message: 'Campo requerido',  
+                }, 
                 {
                     validator: Validators.pattern,
                     customArgs: { pattern: /^([1-9]|1[012])$/ },
-                    // message: 'Error',
+                    message: 'Introduzca un mes válido',
                 },
             ],
         year:
             [
-                // {
-                //     validator: Validators.required,
-                //     message: 'Campo requerido',  
-                // },
+                {
+                    validator: Validators.required,
+                    message: 'Campo requerido',  
+                },
                 {
                     validator: Validators.pattern,
                     customArgs: { pattern: /^2[0-9][2-9](\d{1})$/ },
-                    // message: 'Error',
+                    message: 'Introduzca un año válido',
                 }
     
         ],
@@ -81,7 +81,7 @@ const validationSchema = {
                     parseStringToDateFn: (value) => new Date(value),
                     date: new Date(),
                  },
-                 message: 'Error',
+                 message: 'Fecha no válida',
             },
         ],
         email:[
